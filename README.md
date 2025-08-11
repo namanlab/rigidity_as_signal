@@ -1,0 +1,1 @@
+# rigidity_as_signal
