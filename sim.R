@@ -50,19 +50,19 @@ run_sim <- function(PH, PD, beta,
   
   # 2. Normalized thresholds
   k_SH = (PH - V0S) / sigma0
-  r_SH = (V1HS - PH) / sigma1
+  r_SH = (V1HS - PH) / sqrt(sigma0^2*aHS^2 + sigma1^2)
   k_WH = (PH - V0W) / sigma0
-  r_WH = (V1HW - PH) / sigma1
+  r_WH = (V1HW - PH) / sqrt(sigma0^2*aHW^2 + sigma1^2)
   k_SD = (V0S - PD) / sigma0
-  r_SD = (PD - V1DS) / sigma1
+  r_SD = (PD - V1DS) / sqrt(sigma0^2*aDS^2 + sigma1^2)
   k_WD = (V0W - PD) / sigma0
-  r_WD = (PD - V1DW) / sigma1
+  r_WD = (PD - V1DW) / sqrt(sigma0^2*aDW^2 + sigma1^2)
   
   if (echo){print(data.frame(k_SH, r_SH, k_WH, r_WH, k_SD, r_SD, k_WD, r_WD))}
   
   # 3. Signal Coherence Checks
-  SWD_bound = sigma1 * beta / (2 * sigma0)
-  SWH_bound = sigma0 / (2 * sigma1 * beta)
+  SWD_bound = sqrt(sigma0^2*aDS^2 + sigma1^2) * beta / (2 * sigma0)
+  SWH_bound = sigma0 / (2 * sqrt(sigma0^2*aHW^2 + sigma1^2) * beta)
   
   if (k_WD * r_SD <= SWD_bound) {
     if (echo){cat("!! Signal Coherence Failed (D Path):\n")
