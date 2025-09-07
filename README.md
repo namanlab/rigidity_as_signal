@@ -24,9 +24,9 @@ This project implements and visualizes a two-period signaling game model of urba
 
 All simulations were conducted locally on:
 
-- **Machine:** MacBook Pro (Model Number: MPHE3HN/A)  
+- **Machine:** MacBook Pro (Model Number: MW2U3HN/A)  
 - **OS:** macOS 14.5 (Sonoma)  
-- **Processor:** Apple M2 Pro (10-core CPU: 6 performance + 4 efficiency cores)  
+- **Processor:** Apple M4 Pro (10-core CPU: 4 performance + 6 efficiency cores)  
 - **Memory:** 16 GB unified memory  
 - **R Version:** 4.3.1 (2023-06-16)  
 
