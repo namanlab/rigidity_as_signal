@@ -5,6 +5,10 @@
 sim_results.csv
 .DS_Store
 
+old/
+results/
+imgs_old/
+
 # Session Data files
 .RData
 .RDataTmp

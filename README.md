@@ -15,7 +15,8 @@ This project implements and visualizes a two-period signaling game model of urba
 ├── imgs/ # Figures and diagrams generated from simulations
 ├── LICENSE # Licensing information for use and distribution
 ├── plots.R # Visualization scripts for simulation outputs
-├── sim.R # Core simulation code for model dynamics
+├── simulations.R # Core simulation code for model dynamics
+├── theoretical_buyer_utility.R # Theoretical Calculation of Buyer Utility 
 └── README.md # Project documentation (this file)
 ```
 
@@ -53,8 +54,9 @@ install.packages(c("tidyverse", "patchwork", "ggridges", "latex2exp", "purrr", "
 ## Usage
 
 1. Clone or download this repository.  
-2. Open `sim.R` in R or RStudio to run the core simulation and generate model outputs.  
+2. Open `simulations.R` in R or RStudio to run the core simulation and generate model outputs.  
 3. Use `plots.R` to produce publication-quality figures. Generated plots are saved to the imgs/ directory.
+4. Theoretical calculations for buyer's utility are kept separately in `theoretical_buyer_utility.R` as they are computationally longer. 
 
 ## Output
 
